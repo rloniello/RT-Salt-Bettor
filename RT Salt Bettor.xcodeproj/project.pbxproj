@@ -12,6 +12,15 @@
 		D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8657291584B900908CC1 /* Assets.xcassets */; };
 		D2AD865B291584B900908CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */; };
 		D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8667291584FD00908CC1 /* RootViewController.swift */; };
+		D2AD866C2915873400908CC1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866B2915873400908CC1 /* ResultsViewController.swift */; };
+		D2AD866E2915875000908CC1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866D2915875000908CC1 /* CreditsViewController.swift */; };
+		D2AD8672291587BA00908CC1 /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */; };
+		D2AD8673291587BA00908CC1 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8670291587BA00908CC1 /* credits.html */; };
+		D2AD8674291587BA00908CC1 /* SCR_Rank_table.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */; };
+		D2AD8676291588D600908CC1 /* BWRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8675291588D600908CC1 /* BWRace.swift */; };
+		D2AD8678291588FB00908CC1 /* BWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8677291588FB00908CC1 /* BWMatch.swift */; };
+		D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD86792915893000908CC1 /* BWViewFactory.swift */; };
+		D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		D2AD865A291584B900908CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AD865C291584B900908CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2AD8667291584FD00908CC1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		D2AD866B2915873400908CC1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D2AD866D2915875000908CC1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
+		D2AD8670291587BA00908CC1 /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
+		D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SCR_Rank_table.jpeg; sourceTree = "<group>"; };
+		D2AD8675291588D600908CC1 /* BWRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWRace.swift; sourceTree = "<group>"; };
+		D2AD8677291588FB00908CC1 /* BWMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWMatch.swift; sourceTree = "<group>"; };
+		D2AD86792915893000908CC1 /* BWViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWViewFactory.swift; sourceTree = "<group>"; };
+		D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroodwarScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +79,8 @@
 				D2AD8664291584C900908CC1 /* Controllers */,
 				D2AD8663291584C300908CC1 /* Resources */,
 				D2AD8662291584BD00908CC1 /* Services */,
-				D2AD8657291584B900908CC1 /* Assets.xcassets */,
 				D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */,
+				D2AD8657291584B900908CC1 /* Assets.xcassets */,
 				D2AD865C291584B900908CC1 /* Info.plist */,
 			);
 			path = "RT Salt Bettor";
@@ -71,6 +89,7 @@
 		D2AD8662291584BD00908CC1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD86792915893000908CC1 /* BWViewFactory.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -78,6 +97,9 @@
 		D2AD8663291584C300908CC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD8670291587BA00908CC1 /* credits.html */,
+				D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */,
+				D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -86,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				D2AD8667291584FD00908CC1 /* RootViewController.swift */,
+				D2AD866B2915873400908CC1 /* ResultsViewController.swift */,
+				D2AD866D2915875000908CC1 /* CreditsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +117,7 @@
 		D2AD8665291584D100908CC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +125,8 @@
 		D2AD8666291584E600908CC1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD8675291588D600908CC1 /* BWRace.swift */,
+				D2AD8677291588FB00908CC1 /* BWMatch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,7 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AD865B291584B900908CC1 /* LaunchScreen.storyboard in Resources */,
+				D2AD8674291587BA00908CC1 /* SCR_Rank_table.jpeg in Resources */,
 				D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */,
+				D2AD8673291587BA00908CC1 /* credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +203,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AD8672291587BA00908CC1 /* RTClassifier.mlpackage in Sources */,
+				D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */,
 				D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */,
+				D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */,
 				D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */,
 				D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */,
+				D2AD866C2915873400908CC1 /* ResultsViewController.swift in Sources */,
+				D2AD866E2915875000908CC1 /* CreditsViewController.swift in Sources */,
+				D2AD8678291588FB00908CC1 /* BWMatch.swift in Sources */,
+				D2AD8676291588D600908CC1 /* BWRace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,12 @@
+{
+  "MLModelVersionStringKey" : "7.777",
+  "MLModelDescriptionKey" : "A tablular classifier that attemts to predict the outcome of a Broodwar match between Artosis and an Opponent.",
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.createml.version" : "12.6.0",
+    "com.apple.createml.app.tag" : "99.2",
+    "com.apple.coreml.model.preview.type" : "tabularClassifier",
+    "com.apple.createml.app.version" : "4.0"
+  },
+  "MLModelAuthorKey" : "Russell",
+  "MLModelLicenseKey" : "MIT"
+}

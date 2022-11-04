@@ -22,6 +22,7 @@
 		D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD86792915893000908CC1 /* BWViewFactory.swift */; };
 		D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */; };
 		D2AD867E29158E3200908CC1 /* MatchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD867D29158E3200908CC1 /* MatchEntryView.swift */; };
+		D2AD8680291591A400908CC1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D2AD867F291591A400908CC1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D2AD86792915893000908CC1 /* BWViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWViewFactory.swift; sourceTree = "<group>"; };
 		D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroodwarScrollView.swift; sourceTree = "<group>"; };
 		D2AD867D29158E3200908CC1 /* MatchEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEntryView.swift; sourceTree = "<group>"; };
+		D2AD867F291591A400908CC1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D2AD8642291584B800908CC1 = {
 			isa = PBXGroup;
 			children = (
+				D2AD867F291591A400908CC1 /* README.md */,
 				D2AD864D291584B800908CC1 /* RT Salt Bettor */,
 				D2AD864C291584B800908CC1 /* Products */,
 			);
@@ -194,6 +197,7 @@
 			files = (
 				D2AD865B291584B900908CC1 /* LaunchScreen.storyboard in Resources */,
 				D2AD8674291587BA00908CC1 /* SCR_Rank_table.jpeg in Resources */,
+				D2AD8680291591A400908CC1 /* README.md in Resources */,
 				D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */,
 				D2AD8673291587BA00908CC1 /* credits.html in Resources */,
 			);

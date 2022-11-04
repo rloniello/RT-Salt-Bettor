@@ -9,11 +9,6 @@ import UIKit
 
 final class RootViewController: UIViewController {
     
-    // Primary View Controller.. try not to make it fat.
-    // Launch Credits with info button from corner?
-    // Results automatically pops up from dismissble view controller (modal)
-    // when button is pressed.
-    
     private var bwScrollView = BroodwarScrollView()
     private lazy var informationButton = BWViewFactory.informationButton()
     private lazy var makePerdictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
@@ -31,7 +26,6 @@ final class RootViewController: UIViewController {
     }
     
     private func commonInit() {
-        // Capture init, ..continuing programmatically.
         self.matchEntryView = MatchEntryView()
         self.setupSubviews() // always last.
     }

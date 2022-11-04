@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD864E291584B800908CC1 /* AppDelegate.swift */; };
 		D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8650291584B800908CC1 /* SceneDelegate.swift */; };
-		D2AD8653291584B800908CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8652291584B800908CC1 /* ViewController.swift */; };
-		D2AD8656291584B800908CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8654291584B800908CC1 /* Main.storyboard */; };
 		D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8657291584B900908CC1 /* Assets.xcassets */; };
 		D2AD865B291584B900908CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */; };
+		D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8667291584FD00908CC1 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D2AD864B291584B800908CC1 /* RT Salt Bettor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RT Salt Bettor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AD864E291584B800908CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AD8650291584B800908CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2AD8652291584B800908CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D2AD8655291584B800908CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2AD8657291584B900908CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AD865A291584B900908CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AD865C291584B900908CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2AD8667291584FD00908CC1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +56,52 @@
 			children = (
 				D2AD864E291584B800908CC1 /* AppDelegate.swift */,
 				D2AD8650291584B800908CC1 /* SceneDelegate.swift */,
-				D2AD8652291584B800908CC1 /* ViewController.swift */,
-				D2AD8654291584B800908CC1 /* Main.storyboard */,
+				D2AD8666291584E600908CC1 /* Models */,
+				D2AD8665291584D100908CC1 /* Views */,
+				D2AD8664291584C900908CC1 /* Controllers */,
+				D2AD8663291584C300908CC1 /* Resources */,
+				D2AD8662291584BD00908CC1 /* Services */,
 				D2AD8657291584B900908CC1 /* Assets.xcassets */,
 				D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */,
 				D2AD865C291584B900908CC1 /* Info.plist */,
 			);
 			path = "RT Salt Bettor";
+			sourceTree = "<group>";
+		};
+		D2AD8662291584BD00908CC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2AD8663291584C300908CC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2AD8664291584C900908CC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD8667291584FD00908CC1 /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2AD8665291584D100908CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2AD8666291584E600908CC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +164,6 @@
 			files = (
 				D2AD865B291584B900908CC1 /* LaunchScreen.storyboard in Resources */,
 				D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */,
-				D2AD8656291584B800908CC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AD8653291584B800908CC1 /* ViewController.swift in Sources */,
 				D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */,
 				D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */,
+				D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D2AD8654291584B800908CC1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D2AD8655291584B800908CC1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,20 +314,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 114A22;
 				DEVELOPMENT_TEAM = PF5SG3LUHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RT Salt Bettor/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RT Salt Bettor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-Bettor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -314,20 +342,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 114A22;
 				DEVELOPMENT_TEAM = PF5SG3LUHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RT Salt Bettor/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RT Salt Bettor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-Bettor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

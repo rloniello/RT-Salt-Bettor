@@ -14,7 +14,9 @@ final class RootViewController: UIViewController {
     private lazy var informationButton = BWViewFactory.informationButton()
     private lazy var makePerdictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
     
+    
     private var matchEntryView: MatchEntryView!
+    private var raceSelector: RaceSelectionView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -28,6 +30,7 @@ final class RootViewController: UIViewController {
     
     private func commonInit() {
         self.matchEntryView = MatchEntryView()
+        self.raceSelector = RaceSelectionView()
         self.setupSubviews() // always last.
     }
     
@@ -46,6 +49,7 @@ final class RootViewController: UIViewController {
         self.view.addSubview(bwScrollView)
         
         matchEntryView.translatesAutoresizingMaskIntoConstraints = false
+        raceSelector.translatesAutoresizingMaskIntoConstraints = false
         
         bwScrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditing)))
         informationButton.addTarget(self, action: #selector(showCredits), for: .touchUpInside)
@@ -53,8 +57,8 @@ final class RootViewController: UIViewController {
         
         bwScrollView.addScrollableView(makePerdictionButton)
         bwScrollView.addScrollableView(matchEntryView)
-        // add last: (for Top Z-Position)
-        bwScrollView.addScrollableView(informationButton)
+        bwScrollView.addScrollableView(raceSelector)
+        bwScrollView.addSubview(informationButton)
         
         let constraints: [NSLayoutConstraint] = [
             
@@ -62,7 +66,11 @@ final class RootViewController: UIViewController {
             matchEntryView.leadingAnchor.constraint(equalTo: bwScrollView.leadingAnchor),
             matchEntryView.trailingAnchor.constraint(equalTo: bwScrollView.trailingAnchor),
             
-            makePerdictionButton.topAnchor.constraint(equalTo: matchEntryView.bottomAnchor, constant: 50.0),
+            raceSelector.topAnchor.constraint(equalTo: matchEntryView.bottomAnchor, constant: 12.0),
+            raceSelector.leadingAnchor.constraint(equalTo: bwScrollView.leadingAnchor, constant: 20.0),
+            raceSelector.trailingAnchor.constraint(equalTo: bwScrollView.trailingAnchor, constant: -20.0),
+            
+            makePerdictionButton.topAnchor.constraint(equalTo: raceSelector.bottomAnchor, constant: 30.0),
             makePerdictionButton.widthAnchor.constraint(equalTo: bwScrollView.widthAnchor, multiplier: 0.75),
             makePerdictionButton.centerXAnchor.constraint(equalTo: bwScrollView.centerXAnchor),
             makePerdictionButton.heightAnchor.constraint(equalToConstant: 55.0),
@@ -88,8 +96,18 @@ final class RootViewController: UIViewController {
     
     @objc private func showResults() {
         
+        guard let race = raceSelector.getRace() else {
+            let alert = UIAlertController(title: "Please Select a Race", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                self.dismiss(animated: true)
+            }))
+            
+            self.present(alert, animated: true)
+            return
+        }
+        
         if let matchInfo = matchEntryView.getMatchData() {
-            let bwmatch = BWMatch(currentMMR: matchInfo.mmr, opponentMMR: matchInfo.ommr, opponentRace: .Terran)
+            let bwmatch = BWMatch(currentMMR: matchInfo.mmr, opponentMMR: matchInfo.ommr, opponentRace: race)
             let result = predictor.predict(match: bwmatch)
             let primaryString = predictor.generatePrimaryOutputText(from: result)
             let detailsString = predictor.generateHumanReadablePrediction(from: result)
@@ -103,7 +121,7 @@ final class RootViewController: UIViewController {
             self.present(rvcontroller, animated: true)
             
         } else {
-            // Errors will be processed by matchEntryView. Exit.
+            // Errors will be processed by matchEntryView. Exit for now.
             return
         }
     }

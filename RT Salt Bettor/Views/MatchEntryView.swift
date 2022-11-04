@@ -140,8 +140,8 @@ final class MatchEntryView: UIView {
         }
     }
     
+    
     func getMatchData() -> (mmr: UInt16, ommr: UInt16)? {
-
         guard let mmrString = self.currentMMR.text, let mmr = UInt16(mmrString) else {
             return nil
         }
@@ -156,6 +156,7 @@ final class MatchEntryView: UIView {
         
         return (mmr: mmr, ommr: ommr)
     }
+    
 }
 
 extension MatchEntryView: UITextFieldDelegate {

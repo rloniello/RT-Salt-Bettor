@@ -14,7 +14,6 @@ the model also predicts a relative percentage that represents the strength of th
 
 | Message     | Win % |
 | ----------- | ----------- |
-| :---        |    :----:   |
 | Artosis is strongly favored. | 75-99 |
 | Artosis is slightly favored. | 55-75 |
 | The match is fairly even.    | 45-55 |
@@ -23,7 +22,7 @@ the model also predicts a relative percentage that represents the strength of th
 
 ### Data Collection & Model Accuracy
 
-Data was collected via Artosis Twitch Channel, more than 200 games where collected to create the ML model using CreateML. 
+Data was collected via VODs from Artosis' Twitch Channel, more than 200 games where collected to create the ML model using CreateML. 
 Games must satisfy the following criteria: 
 * MMR of each player is known before the match. (No Unranked Players)
 * Player(s) must trade material (a battle fought or material lost).

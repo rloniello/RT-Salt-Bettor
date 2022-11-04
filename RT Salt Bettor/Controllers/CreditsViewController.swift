@@ -15,13 +15,12 @@ final class CreditsViewController: UIViewController {
     
     // MARK: Properties & Subviews
     private var webkitView: WKWebView!
-    
+    private lazy var bwBackground = BWViewFactory.background(true)
     
     // MARK: Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setupWebkitView()
-        self.setupBroodwarBackground()
         self.setupSubviews()
         self.loadHTML()
     }
@@ -39,22 +38,26 @@ final class CreditsViewController: UIViewController {
         self.webkitView.isOpaque = false
     }
     
-    private func setupBroodwarBackground() {
-        self.view.addSubview(BWViewFactory.background(true))
-    }
-    
     private func setupSubviews() {
         
-        self.view.addSubview(webkitView)
+        self.view.addSubview(bwBackground)
+        bwBackground.addSubview(webkitView)
+        
         webkitView.translatesAutoresizingMaskIntoConstraints = false
+        bwBackground.translatesAutoresizingMaskIntoConstraints = false
         
         let guide = self.view.layoutMarginsGuide
         
         NSLayoutConstraint.activate([
-            webkitView.topAnchor.constraint(equalTo: guide.topAnchor, constant: 100),
-            webkitView.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 10),
-            webkitView.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -10),
-            webkitView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20)
+            bwBackground.topAnchor.constraint(equalTo: guide.topAnchor),
+            bwBackground.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+            bwBackground.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            bwBackground.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            
+            webkitView.topAnchor.constraint(equalTo: bwBackground.topAnchor, constant: 100),
+            webkitView.leadingAnchor.constraint(equalTo: bwBackground.leadingAnchor, constant: 20),
+            webkitView.trailingAnchor.constraint(equalTo: bwBackground.trailingAnchor, constant: -20),
+            webkitView.bottomAnchor.constraint(equalTo: bwBackground.bottomAnchor, constant: -20)
         ])
     }
     

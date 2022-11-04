@@ -12,6 +12,7 @@ final class ResultsViewController: UIViewController {
     
     // MARK: Properties & Subviews
     let matchResults = MatchResultView()
+    private lazy var bwBackground = BWViewFactory.background(true)
     
     lazy var action: () -> () = {
         self.dismiss(animated: true)
@@ -21,28 +22,32 @@ final class ResultsViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupBroodwarBackground()
         self.setupSubviews()
     }
     
     
     // MARK: Class Methods
-    private func setupBroodwarBackground() {
-        self.view.addSubview(BWViewFactory.background(true))
-    }
-    
     private func setupSubviews() {
-        self.view.addSubview(matchResults)
+        self.view.addSubview(bwBackground)
+        bwBackground.addSubview(matchResults)
+        
         matchResults.okButtonAction = action
         matchResults.translatesAutoresizingMaskIntoConstraints = false
+        bwBackground.translatesAutoresizingMaskIntoConstraints = false
         
         let guide = self.view.layoutMarginsGuide
         
         NSLayoutConstraint.activate([
-            matchResults.topAnchor.constraint(equalTo: guide.topAnchor, constant: 100),
-            matchResults.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
-            matchResults.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 10),
-            matchResults.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -10),
+            
+            bwBackground.topAnchor.constraint(equalTo: guide.topAnchor),
+            bwBackground.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+            bwBackground.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            bwBackground.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            
+            matchResults.topAnchor.constraint(equalTo: bwBackground.topAnchor, constant: 100),
+            matchResults.centerXAnchor.constraint(equalTo: bwBackground.centerXAnchor),
+            matchResults.leadingAnchor.constraint(equalTo: bwBackground.leadingAnchor, constant: 10),
+            matchResults.trailingAnchor.constraint(equalTo: bwBackground.trailingAnchor, constant: -10),
         ])
     }
     

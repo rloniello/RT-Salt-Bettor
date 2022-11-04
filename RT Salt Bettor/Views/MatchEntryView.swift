@@ -79,8 +79,6 @@ final class MatchEntryView: UIView {
         
         let constraints: [NSLayoutConstraint] = [
             
-            self.widthAnchor.constraint(equalTo: self.heightAnchor),
-            
             artosisImageView.widthAnchor.constraint(equalToConstant: 200),
             artosisImageView.heightAnchor.constraint(equalTo: artosisImageView.widthAnchor),
             artosisImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),

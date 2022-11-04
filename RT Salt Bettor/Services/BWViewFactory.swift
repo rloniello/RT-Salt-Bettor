@@ -70,6 +70,6 @@ final class BWViewFactory: NSObject {
         }
         return b
     }
-
+    
     
 }

@@ -43,6 +43,33 @@ final class BWViewFactory: NSObject {
         l.textAlignment = alignment
         return l
     }
+    
+    /// Generates a Broodwar-like button, Green in outline with the first letter of the text Bold.
+    /// Generates an "Ok" button if no title is given.
+    /// - Parameter title: The normal title of the button.
+    /// - Returns: A UIButton
+    static func button(withTitle: String = "") -> UIButton {
+        let b = UIButton(configuration: .borderedTinted())
+        let color = UIColor(named: "bwbutton")
+        b.layer.borderColor = color?.cgColor
+        b.layer.borderWidth = 3.0
+        b.layer.cornerRadius = 8.0
+        b.tintColor = color?.withAlphaComponent(0.8)
+        b.translatesAutoresizingMaskIntoConstraints = false
+        if let firstChar = withTitle.first {
+            let t: NSMutableAttributedString = NSMutableAttributedString(string: "\(firstChar)", attributes: [.font:UIFont.boldSystemFont(ofSize: 14.0)])
+            let restOfTitle = withTitle.dropFirst(1)
+            let itle: NSAttributedString = NSAttributedString(string: String(restOfTitle), attributes: [.font:UIFont.systemFont(ofSize: 14.0)])
+            t.append(itle)
+            b.setAttributedTitle(t, for: .normal)
+        } else {
+            let t: NSMutableAttributedString = NSMutableAttributedString(string: "O", attributes: [.font:UIFont.boldSystemFont(ofSize: 14.0)])
+            let itle: NSAttributedString = NSAttributedString(string: "k", attributes: [.font:UIFont.systemFont(ofSize: 14.0)])
+            t.append(itle)
+            b.setAttributedTitle(t, for: .normal)
+        }
+        return b
+    }
 
     
 }

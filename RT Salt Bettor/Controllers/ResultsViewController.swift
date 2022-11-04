@@ -12,6 +12,6 @@ final class ResultsViewController: UIViewController {
     // Show the results of the BWMatch input somehow.
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .blue
     }
 }

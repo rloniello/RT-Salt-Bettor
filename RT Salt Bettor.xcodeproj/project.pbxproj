@@ -21,6 +21,7 @@
 		D2AD8678291588FB00908CC1 /* BWMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8677291588FB00908CC1 /* BWMatch.swift */; };
 		D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD86792915893000908CC1 /* BWViewFactory.swift */; };
 		D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */; };
+		D2AD867E29158E3200908CC1 /* MatchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD867D29158E3200908CC1 /* MatchEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D2AD8677291588FB00908CC1 /* BWMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWMatch.swift; sourceTree = "<group>"; };
 		D2AD86792915893000908CC1 /* BWViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWViewFactory.swift; sourceTree = "<group>"; };
 		D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroodwarScrollView.swift; sourceTree = "<group>"; };
+		D2AD867D29158E3200908CC1 /* MatchEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AD867B291589A400908CC1 /* BroodwarScrollView.swift */,
+				D2AD867D29158E3200908CC1 /* MatchEntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */,
 				D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */,
 				D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */,
+				D2AD867E29158E3200908CC1 /* MatchEntryView.swift in Sources */,
 				D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */,
 				D2AD866C2915873400908CC1 /* ResultsViewController.swift in Sources */,
 				D2AD866E2915875000908CC1 /* CreditsViewController.swift in Sources */,

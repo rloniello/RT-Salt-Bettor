@@ -70,6 +70,45 @@ final class Hermes {
         Hermes.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
+    /// Displays a toast text label with the given message as an alert beneath a top view with 0 spacing.
+    /// The apprised alert will disappear after 5 seconds. (removed from super view).
+    /// - Parameters:
+    ///   - message: A short message
+    ///   - backgroundColor: The background color of the text label.
+    ///   - textColor: The color of the text's font.
+    ///   - topView: The top view whoses `view.frame.minY` will be used to determine the top of the text label.
+    class func apprise(message: String, backgroundColor: UIColor = .systemYellow, textColor: UIColor = .label, topView: UIView) {
+        if let rootViewController = Hermes.rootViewController {
+            let height: CGFloat = 45.0
+            let messageView: UILabel = {
+                let l = UILabel(frame: CGRect(x: 0, y: topView.frame.minY - height, width: rootViewController.view.frame.width, height: height))
+                l.adjustsFontSizeToFitWidth = true
+                l.font = UIFont.systemFont(ofSize: 12)
+                l.textAlignment = .center
+                l.text = message
+                l.textColor = textColor
+                l.backgroundColor = backgroundColor
+                return l
+            }()
+
+            rootViewController.view.addSubview(messageView)
+            
+            UIView.animate(withDuration: 0.3) {
+                messageView.center = CGPoint(x: messageView.center.x, y: messageView.center.y + height)
+            }
+            
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                UIView.animate(withDuration: 0.3) {
+                    messageView.center = CGPoint(x: messageView.center.x, y: messageView.center.y - height)
+                }
+            }
+            
+            Timer.scheduledTimer(withTimeInterval: 5.5, repeats: false) { (timer) in
+                messageView.removeFromSuperview()
+            }
+        }
+    }
+    
 }
 
 /*

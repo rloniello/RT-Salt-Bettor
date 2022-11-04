@@ -9,18 +9,24 @@ import UIKit
 
 final class ResultsViewController: UIViewController {
     
+    
+    // MARK: Properties & Subviews
     let matchResults = MatchResultView()
     
     lazy var action: () -> () = {
         self.dismiss(animated: true)
     }
     
+    
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupBroodwarBackground()
         self.setupSubviews()
     }
     
+    
+    // MARK: Class Methods
     private func setupBroodwarBackground() {
         self.view.addSubview(BWViewFactory.background(true))
     }

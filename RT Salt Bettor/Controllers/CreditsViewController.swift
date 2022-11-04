@@ -12,6 +12,7 @@ import WebKit
 /// Displays Credits & Acknowledgments from an HTML file in the main Bundle.
 final class CreditsViewController: UIViewController {
     
+    
     // MARK: Properties & Subviews
     private var webkitView: WKWebView!
     
@@ -30,7 +31,7 @@ final class CreditsViewController: UIViewController {
         self.webkitView = nil
     }
     
-
+    
     // MARK: Class Methods
     private func setupWebkitView() {
         self.webkitView = WKWebView()

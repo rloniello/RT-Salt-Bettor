@@ -9,15 +9,18 @@ import UIKit
 
 final class RootViewController: UIViewController {
     
+    
+    // MARK: Properties & Subviews
+    var matchEntryView: MatchEntryView!
+    var raceSelector: RaceSelectionView!
+    
     private var predictor = MatchPredictor()
     private var bwScrollView = BroodwarScrollView()
     private lazy var informationButton = BWViewFactory.informationButton()
     private lazy var makePerdictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
     
     
-    private var matchEntryView: MatchEntryView!
-    private var raceSelector: RaceSelectionView!
-    
+    // MARK: Initialization
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.commonInit()
@@ -34,6 +37,8 @@ final class RootViewController: UIViewController {
         self.setupSubviews() // always last.
     }
     
+    
+    // MARK: Life Cycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let mmr = matchEntryView.currentMMR.text, let mmrTextAsInt = Int(mmr) {
@@ -45,6 +50,8 @@ final class RootViewController: UIViewController {
         }
     }
     
+    
+    // MARK: Class Methods
     private func setupSubviews() {
         self.view.addSubview(bwScrollView)
         
@@ -82,7 +89,6 @@ final class RootViewController: UIViewController {
         ]
         
         NSLayoutConstraint.activate(constraints)
-        
     }
     
     @objc private func endEditing() {

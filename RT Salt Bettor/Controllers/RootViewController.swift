@@ -97,18 +97,14 @@ final class RootViewController: UIViewController {
     @objc private func showResults() {
         
         guard let race = raceSelector.getRace() else {
-            let alert = UIAlertController(title: "Please Select a Race", message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                self.dismiss(animated: true)
-            }))
-            
-            self.present(alert, animated: true)
+            Hermes.kairosDirectMessage("Race is Required", message: "Highlight a Terran, Zerg or Protoss image below to select it.")
             return
         }
         
         if let matchInfo = matchEntryView.getMatchData() {
             let bwmatch = BWMatch(currentMMR: matchInfo.mmr, opponentMMR: matchInfo.ommr, opponentRace: race)
             let result = predictor.predict(match: bwmatch)
+            
             let primaryString = predictor.generatePrimaryOutputText(from: result)
             let detailsString = predictor.generateHumanReadablePrediction(from: result)
             

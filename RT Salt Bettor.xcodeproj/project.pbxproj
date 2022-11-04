@@ -27,6 +27,7 @@
 		D2AD868429159A4C00908CC1 /* RTSaltError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD868329159A4C00908CC1 /* RTSaltError.swift */; };
 		D2AD868629159A7E00908CC1 /* MatchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD868529159A7E00908CC1 /* MatchResultView.swift */; };
 		D2B0DAE92915A39800D007ED /* RaceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAE82915A39800D007ED /* RaceSelectionView.swift */; };
+		D2B0DAEB2915A65F00D007ED /* Hermes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEA2915A65F00D007ED /* Hermes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		D2AD868329159A4C00908CC1 /* RTSaltError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSaltError.swift; sourceTree = "<group>"; };
 		D2AD868529159A7E00908CC1 /* MatchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResultView.swift; sourceTree = "<group>"; };
 		D2B0DAE82915A39800D007ED /* RaceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSelectionView.swift; sourceTree = "<group>"; };
+		D2B0DAEA2915A65F00D007ED /* Hermes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hermes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				D2AD86792915893000908CC1 /* BWViewFactory.swift */,
 				D2AD86812915955D00908CC1 /* MatchPredictor.swift */,
+				D2B0DAEA2915A65F00D007ED /* Hermes.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				D2AD866C2915873400908CC1 /* ResultsViewController.swift in Sources */,
 				D2AD86822915955D00908CC1 /* MatchPredictor.swift in Sources */,
 				D2B0DAE92915A39800D007ED /* RaceSelectionView.swift in Sources */,
+				D2B0DAEB2915A65F00D007ED /* Hermes.swift in Sources */,
 				D2AD866E2915875000908CC1 /* CreditsViewController.swift in Sources */,
 				D2AD868629159A7E00908CC1 /* MatchResultView.swift in Sources */,
 				D2AD8678291588FB00908CC1 /* BWMatch.swift in Sources */,

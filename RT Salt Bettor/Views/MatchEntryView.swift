@@ -142,15 +142,24 @@ final class MatchEntryView: UIView {
     
     
     func getMatchData() -> (mmr: UInt16, ommr: UInt16)? {
+
         guard let mmrString = self.currentMMR.text, let mmr = UInt16(mmrString) else {
+            Hermes.distressing(DataEntryError(reason: .userError("Enter RT's MMR")).description)
             return nil
         }
         
         guard let ommrString = self.opponentMMR.text, let ommr = UInt16(ommrString) else {
+            Hermes.distressing(DataEntryError(reason: .userError("Enter Opponent's MMR")).description)
             return nil
         }
 
-        if (mmr > 4000 || ommr > 4000) {
+        if (mmr > 4000) {
+            Hermes.distressing(DataEntryError(reason: .mmrTooHigh).description)
+            return nil
+        }
+        
+        if (ommr > 4000) {
+            Hermes.distressing(DataEntryError(reason: .ommrTooHigh).description)
             return nil
         }
         

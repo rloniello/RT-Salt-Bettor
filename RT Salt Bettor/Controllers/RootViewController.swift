@@ -9,6 +9,7 @@ import UIKit
 
 final class RootViewController: UIViewController {
     
+    private var predictor = MatchPredictor()
     private var bwScrollView = BroodwarScrollView()
     private lazy var informationButton = BWViewFactory.informationButton()
     private lazy var makePerdictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
@@ -30,11 +31,23 @@ final class RootViewController: UIViewController {
         self.setupSubviews() // always last.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let mmr = matchEntryView.currentMMR.text, let mmrTextAsInt = Int(mmr) {
+            matchEntryView.currentMMR.textColor = matchEntryView.textColor(for: mmrTextAsInt)
+        }
+        
+        if let ommr = matchEntryView.opponentMMR.text, let ommrTextAsInt = Int(ommr) {
+            matchEntryView.opponentMMR.textColor = matchEntryView.textColor(for: ommrTextAsInt)
+        }
+    }
+    
     private func setupSubviews() {
         self.view.addSubview(bwScrollView)
         
         matchEntryView.translatesAutoresizingMaskIntoConstraints = false
         
+        bwScrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditing)))
         informationButton.addTarget(self, action: #selector(showCredits), for: .touchUpInside)
         makePerdictionButton.addTarget(self, action: #selector(showResults), for: .touchUpInside)
         
@@ -64,9 +77,8 @@ final class RootViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .red
+    @objc private func endEditing() {
+        self.view.endEditing(true)
     }
     
     @objc private func showCredits() {
@@ -75,8 +87,25 @@ final class RootViewController: UIViewController {
     }
     
     @objc private func showResults() {
-        let resultsVC = ResultsViewController()
-        self.present(resultsVC, animated: true)
+        
+        if let matchInfo = matchEntryView.getMatchData() {
+            let bwmatch = BWMatch(currentMMR: matchInfo.mmr, opponentMMR: matchInfo.ommr, opponentRace: .Terran)
+            let result = predictor.predict(match: bwmatch)
+            let primaryString = predictor.generatePrimaryOutputText(from: result)
+            let detailsString = predictor.generateHumanReadablePrediction(from: result)
+            
+            let rvcontroller = ResultsViewController()
+            rvcontroller.matchResults.set(primaryLabel: primaryString, details: detailsString)
+            if let presentor = rvcontroller.presentationController as? UISheetPresentationController {
+                presentor.detents = [.medium()]
+            }
+            
+            self.present(rvcontroller, animated: true)
+            
+        } else {
+            // Errors will be processed by matchEntryView. Exit.
+            return
+        }
     }
     
 }

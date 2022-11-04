@@ -9,10 +9,35 @@ import UIKit
 
 final class ResultsViewController: UIViewController {
     
-    // Show the results of the BWMatch input somehow.
+    let matchResults = MatchResultView()
+    
+    lazy var action: () -> () = {
+        self.dismiss(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
+        self.setupBroodwarBackground()
+        self.setupSubviews()
     }
+    
+    private func setupBroodwarBackground() {
+        self.view.addSubview(BWViewFactory.background(true))
+    }
+    
+    private func setupSubviews() {
+        self.view.addSubview(matchResults)
+        matchResults.okButtonAction = action
+        matchResults.translatesAutoresizingMaskIntoConstraints = false
+        
+        let guide = self.view.layoutMarginsGuide
+        
+        NSLayoutConstraint.activate([
+            matchResults.topAnchor.constraint(equalTo: guide.topAnchor, constant: 100),
+            matchResults.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+            matchResults.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 10),
+            matchResults.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -10),
+        ])
+    }
+    
 }

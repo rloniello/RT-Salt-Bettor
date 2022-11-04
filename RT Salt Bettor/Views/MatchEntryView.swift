@@ -29,6 +29,7 @@ final class MatchEntryView: UIView {
         tf.font = UIFont.boldSystemFont(ofSize: 20.0)
         tf.textAlignment = .center
         tf.keyboardType = .numberPad
+        tf.delegate = self
         return tf
     }()
     
@@ -42,6 +43,7 @@ final class MatchEntryView: UIView {
         tf.font = UIFont.boldSystemFont(ofSize: 20.0)
         tf.textAlignment = .center
         tf.keyboardType = .numberPad
+        tf.delegate = self
         return tf
     }()
     
@@ -105,5 +107,80 @@ final class MatchEntryView: UIView {
         ]
         
         NSLayoutConstraint.activate(constraints)
+    }
+    
+    /// Provides the default text color for the given Match Making Rating (MMR)
+    /// - Parameter mmr: The Match Making Rating of the player.
+    /// - Returns: A color representing Skill Class or League.
+    func textColor(for mmr: Int) -> UIColor {
+        switch (mmr) {
+                // F
+            case 0...1175:
+                return UIColor(red: 184/255, green: 183/255, blue: 183/255, alpha: 1)
+                // E
+            case 1176...1375:
+                return UIColor(red: 75/255, green: 210/255, blue: 118/255, alpha: 1)
+                // D
+            case 1376...1518:
+                return UIColor(red: 100/255, green: 215/255, blue: 215/255, alpha: 1)
+                // C
+            case 1519...1669:
+                return UIColor(red: 80/255, green: 130/255, blue: 230/255, alpha: 1)
+                // B
+            case 1670...1925:
+                return UIColor(red: 165/255, green: 25/255, blue: 230/255, alpha: 1)
+                // A
+            case 1926...2138:
+                return UIColor(red: 220/255, green: 60/255, blue: 30/255, alpha: 1)
+                // S, S+
+            case 2139...Int.max:
+                return UIColor(red: 220/255, green: 200/255, blue: 80/255, alpha: 1)
+            default:
+                return UIColor(red: 184/255, green: 183/255, blue: 183/255, alpha: 1)
+        }
+    }
+    
+    func getMatchData() -> (mmr: UInt16, ommr: UInt16)? {
+
+        guard let mmrString = self.currentMMR.text, let mmr = UInt16(mmrString) else {
+            return nil
+        }
+        
+        guard let ommrString = self.opponentMMR.text, let ommr = UInt16(ommrString) else {
+            return nil
+        }
+
+        if (mmr > 4000 || ommr > 4000) {
+            return nil
+        }
+        
+        return (mmr: mmr, ommr: ommr)
+    }
+}
+
+extension MatchEntryView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text, let intText = Int(text) {
+            let color = textColor(for: intText)
+            textField.textColor = color
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        
+        if (string == "") {
+            return true
+        }
+        // Stop more than 4 character input
+        if (currentText.count >= 4) {
+            return false
+        }
+        
+        return true
     }
 }

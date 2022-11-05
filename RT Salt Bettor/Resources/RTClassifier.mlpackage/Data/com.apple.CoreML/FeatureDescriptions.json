@@ -4,18 +4,18 @@
       "MLFeatureShortDescription" : "The probabilty of the win or loss."
     },
     "WIN\/LOSS" : {
-      "MLFeatureShortDescription" : "An integer boolean value, (1 = win)"
+      "MLFeatureShortDescription" : "A Boolean Integer Representing a Win or Loss"
     }
   },
   "Inputs" : {
     "RACE" : {
-      "MLFeatureShortDescription" : "The Broodwar Race as single character (T, P, Z)"
+      "MLFeatureShortDescription" : "The Race of the Opponent"
     },
     "MMR" : {
-      "MLFeatureShortDescription" : "Artosis' Current MMR at the start of the match."
+      "MLFeatureShortDescription" : "Artosis' MMR"
     },
     "OMMR" : {
-      "MLFeatureShortDescription" : "The opponents MMR at the start of the match. "
+      "MLFeatureShortDescription" : "The Oppnents MMR"
     }
   },
   "TrainingInputs" : {

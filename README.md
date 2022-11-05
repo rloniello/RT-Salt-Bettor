@@ -20,9 +20,9 @@ the model also predicts a relative percentage that represents the strength of th
 | Opponent is slightly favored. | 45-25 |
 | Opponent is strongly favored.| 25-0 |
 
-### Data Collection & Model Accuracy
+### Data Collection
 
-Data was collected via VODs from Artosis' Twitch Channel, more than 200 games where collected to create the ML model using CreateML. 
+Data was collected via VODs from Artosis' Twitch Channel, more than 250 games where collected to create the ML model using CreateML. 
 Games must satisfy the following criteria: 
 * MMR of each player is known before the match. (No Unranked Players)
 * Player(s) must trade material (a battle fought or material lost).
@@ -30,3 +30,15 @@ Games must satisfy the following criteria:
 * A player must leave the match, a decisive victory. (No Disconnects).
 
 Note: For Random players the race data was collected after the race was known and the above conditions met. 
+
+### Machine Learning Model Details
+
+CoreML was used to create the model using a Boosted Tree. 
+The following evaluation was generated after training:
+
+| Win / Loss | Record Count | Precision | Recall | F1 Score | 
+| ---------- | ------------ | --------- | ------ | -------- |
+| Win        |      130     |   98%     |  98%   |   0.98   |
+| Loss       |      115     |   98%     |  97%   |   0.98   |
+
+12 Records where used for validation, for a total of 257 records.

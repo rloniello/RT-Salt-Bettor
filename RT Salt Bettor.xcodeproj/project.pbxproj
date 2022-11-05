@@ -14,7 +14,6 @@
 		D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8667291584FD00908CC1 /* RootViewController.swift */; };
 		D2AD866C2915873400908CC1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866B2915873400908CC1 /* ResultsViewController.swift */; };
 		D2AD866E2915875000908CC1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866D2915875000908CC1 /* CreditsViewController.swift */; };
-		D2AD8672291587BA00908CC1 /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */; };
 		D2AD8673291587BA00908CC1 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8670291587BA00908CC1 /* credits.html */; };
 		D2AD8674291587BA00908CC1 /* SCR_Rank_table.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */; };
 		D2AD8676291588D600908CC1 /* BWRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8675291588D600908CC1 /* BWRace.swift */; };
@@ -30,6 +29,7 @@
 		D2B0DAEB2915A65F00D007ED /* Hermes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEA2915A65F00D007ED /* Hermes.swift */; };
 		D2B0DAED2915AF1300D007ED /* RTAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEC2915AF1300D007ED /* RTAppState.swift */; };
 		D2B0DAEF2915AF2600D007ED /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEE2915AF2600D007ED /* UserDefaults.swift */; };
+		D2B0DAF82916021400D007ED /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		D2AD8667291584FD00908CC1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D2AD866B2915873400908CC1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D2AD866D2915875000908CC1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
-		D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 		D2AD8670291587BA00908CC1 /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
 		D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SCR_Rank_table.jpeg; sourceTree = "<group>"; };
 		D2AD8675291588D600908CC1 /* BWRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWRace.swift; sourceTree = "<group>"; };
@@ -59,6 +58,8 @@
 		D2B0DAEC2915AF1300D007ED /* RTAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTAppState.swift; sourceTree = "<group>"; };
 		D2B0DAEE2915AF2600D007ED /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D2B0DAF12915B94A00D007ED /* RT Salt Bettor.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "RT Salt Bettor.entitlements"; sourceTree = "<group>"; };
+		D2B0DAF22915FFD100D007ED /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
+		D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				D2AD8670291587BA00908CC1 /* credits.html */,
-				D2AD866F291587BA00908CC1 /* RTClassifier.mlpackage */,
+				D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */,
 				D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */,
+				D2B0DAF22915FFD100D007ED /* Artosis Match Data Cleaned.numbers */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -233,12 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AD8672291587BA00908CC1 /* RTClassifier.mlpackage in Sources */,
 				D2B0DAED2915AF1300D007ED /* RTAppState.swift in Sources */,
 				D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */,
 				D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */,
 				D2AD868429159A4C00908CC1 /* RTSaltError.swift in Sources */,
 				D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */,
+				D2B0DAF82916021400D007ED /* RTClassifier.mlpackage in Sources */,
 				D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */,
 				D2AD867E29158E3200908CC1 /* MatchEntryView.swift in Sources */,
 				D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */,

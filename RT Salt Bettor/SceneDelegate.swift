@@ -32,7 +32,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         saveCurrentState()
     }
     
-    
     func saveCurrentState() {
         if let rootViewController = window?.rootViewController as? RootViewController {
             var mmr = rootViewController.matchEntryView.currentMMR.text ?? "2150"
@@ -49,7 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UserDefaults.standard.applicationState = rootVCState
         }
     }
-    
     
     func loadCurrentState(to rootViewController: RootViewController) {
         if let appState = UserDefaults.standard.applicationState {

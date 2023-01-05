@@ -1,7 +1,7 @@
 {
   "Outputs" : {
     "WIN\/LOSSProbability" : {
-      "MLFeatureShortDescription" : "The probabilty of the win or loss."
+      "MLFeatureShortDescription" : "A Dictionary containing the probabilty of the win or loss."
     },
     "WIN\/LOSS" : {
       "MLFeatureShortDescription" : "A Boolean Integer Representing a Win or Loss"

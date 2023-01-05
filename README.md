@@ -1,11 +1,22 @@
 # RT Salt Bettor
 
-### About
+## About
 The RT Salt Bettor is an iOS, iPadOS and macOS app that can help make more informed bets for Twitch Channel Points. 
-The App is intended to showcase the use of a simple CoreML Model while having fun.
+It is provided for entertainment & educational purposes only and should not be used for any other purpose.
 
 Sick of loosing all your Salt (Artosis' Twitch Channel Points) to B-Rank Protoss Smurf's? 
-Make better bets with the salt bettor app.
+Make better bets with the RT Salt Bettor App.
+
+## Features
+RT Salt Better showcases the follwing Features:
+
+- [x] Core ML
+- [x] Entirely Programmatic UI
+- [x] Starcraft Broodwar Themed
+- [x] Simple State Restoration
+- [x] View Factory Pattern
+- [x] Model View Controller Pattern
+
 
 ### Human Readable Output Chart
 
@@ -22,8 +33,8 @@ the model also predicts a relative percentage that represents the strength of th
 
 ### Data Collection
 
-Data was collected via VODs from Artosis' Twitch Channel, more than 250 games where collected to create the ML model using CreateML. 
-Games must satisfy the following criteria: 
+Data was collected via VODs from Artosis' Twitch Channel, more than 300 games where collected to create the ML model using CreateML. 
+Games must satisfy the following criteria and constraints: 
 * MMR of each player is known before the match. (No Unranked Players)
 * Player(s) must trade material (a battle fought or material lost).
 * The Game must be more than 1 minute in length.
@@ -33,12 +44,15 @@ Note: For Random players the race data was collected after the race was known an
 
 ### Machine Learning Model Details
 
-CoreML was used to create the model using a Boosted Tree. 
+CoreML was used to create the model using a Random Forest to avoid overfitting. 
 The following evaluation was generated after training:
 
 | Win / Loss | Record Count | Precision | Recall | F1 Score | 
 | ---------- | ------------ | --------- | ------ | -------- |
-| Win        |      130     |   98%     |  98%   |   0.98   |
-| Loss       |      115     |   98%     |  97%   |   0.98   |
+| Win        |      176     |   93%     |  95%   |   0.94   |
+| Loss       |      165     |   95%     |  92%   |   0.94   |
 
-12 Records where used for validation, for a total of 257 records.
+29 Records where used for validation, for a total of 370 records.
+
+## Disclaimer
+"RT Salt Bettor" is a predictive app for Starcraft Broodwar matches between Artosis and another player. It is provided for entertainment & educational purposes only and should not be used for any other purpose. The predictions made by the app are not guaranteed to be accurate and should not be relied upon for any financial or other important decisions. The app does not endorse or encourage gambling or any other illegal activity. Use of the app is at the user's own risk and the creators of the app shall not be held responsible for any losses or damages that may result from using the app.

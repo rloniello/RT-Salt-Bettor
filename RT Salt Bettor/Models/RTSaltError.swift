@@ -29,9 +29,19 @@ enum DataEntryErrorReason: CustomStringConvertible {
     var description: String {
         switch self {
             case .mmrTooHigh:
-                return "Yeah, Flash would win."
+                return [
+                    "Yeah, Flash would win.",
+                    "EZ, YEPP",
+                    "Why even ask?",
+                    "There Trash, RT's brain is melting",
+                ].randomElement()!
             case .ommrTooHigh:
-                return "Flash, is that you?"
+                return [
+                "SAY GG",
+                "Oof LUL",
+                "Buckle up, the salt storm cometh.",
+                "He'll probablly say it is cheese."
+                ].randomElement()!
             case .raceNotSelected:
                 return "Please select a Race"
             case .unknown(let string):

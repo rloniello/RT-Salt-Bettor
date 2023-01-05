@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D293B25D296652610047EE66 /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D293B25C296652610047EE66 /* RTClassifier.mlpackage */; };
 		D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD864E291584B800908CC1 /* AppDelegate.swift */; };
 		D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8650291584B800908CC1 /* SceneDelegate.swift */; };
 		D2AD8658291584B900908CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AD8657291584B900908CC1 /* Assets.xcassets */; };
@@ -29,10 +30,12 @@
 		D2B0DAEB2915A65F00D007ED /* Hermes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEA2915A65F00D007ED /* Hermes.swift */; };
 		D2B0DAED2915AF1300D007ED /* RTAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEC2915AF1300D007ED /* RTAppState.swift */; };
 		D2B0DAEF2915AF2600D007ED /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEE2915AF2600D007ED /* UserDefaults.swift */; };
-		D2B0DAF82916021400D007ED /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D293B25829664E7E0047EE66 /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
+		D293B25929664E9B0047EE66 /* Artosis Match Data-010423.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Artosis Match Data-010423.csv"; sourceTree = "<group>"; };
+		D293B25C296652610047EE66 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 		D2AD864B291584B800908CC1 /* RT Salt Bettor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RT Salt Bettor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AD864E291584B800908CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AD8650291584B800908CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,8 +61,6 @@
 		D2B0DAEC2915AF1300D007ED /* RTAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTAppState.swift; sourceTree = "<group>"; };
 		D2B0DAEE2915AF2600D007ED /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D2B0DAF12915B94A00D007ED /* RT Salt Bettor.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "RT Salt Bettor.entitlements"; sourceTree = "<group>"; };
-		D2B0DAF22915FFD100D007ED /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
-		D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				D2AD8670291587BA00908CC1 /* credits.html */,
-				D2B0DAF72916021400D007ED /* RTClassifier.mlpackage */,
+				D293B25C296652610047EE66 /* RTClassifier.mlpackage */,
 				D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */,
-				D2B0DAF22915FFD100D007ED /* Artosis Match Data Cleaned.numbers */,
+				D293B25829664E7E0047EE66 /* Artosis Match Data Cleaned.numbers */,
+				D293B25929664E9B0047EE66 /* Artosis Match Data-010423.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,12 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D293B25D296652610047EE66 /* RTClassifier.mlpackage in Sources */,
 				D2B0DAED2915AF1300D007ED /* RTAppState.swift in Sources */,
 				D2AD867A2915893000908CC1 /* BWViewFactory.swift in Sources */,
 				D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */,
 				D2AD868429159A4C00908CC1 /* RTSaltError.swift in Sources */,
 				D2AD867C291589A400908CC1 /* BroodwarScrollView.swift in Sources */,
-				D2B0DAF82916021400D007ED /* RTClassifier.mlpackage in Sources */,
 				D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */,
 				D2AD867E29158E3200908CC1 /* MatchEntryView.swift in Sources */,
 				D2AD8668291584FD00908CC1 /* RootViewController.swift in Sources */,

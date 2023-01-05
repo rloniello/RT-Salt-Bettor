@@ -14,7 +14,7 @@ Make better bets with the RT Salt Bettor App.
 </p>
 
 ## Features
-RT Salt Better showcases the follwing Features:
+RT Salt Bettor showcases the follwing Features:
 
 - [x] Core ML
 - [x] Entirely Programmatic UI

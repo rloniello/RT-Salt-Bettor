@@ -38,8 +38,8 @@
 		D293B25C296652610047EE66 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 		D293B25E296655070047EE66 /* License.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 		D293B25F29665DF90047EE66 /* screenplay.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = screenplay.gif; sourceTree = "<group>"; };
-		D293B26029665E850047EE66 /* screenshot-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-main.png"; sourceTree = "<group>"; };
 		D293B26129665EBC0047EE66 /* screenshot-credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-credits.png"; sourceTree = "<group>"; };
+		D293B262296664B20047EE66 /* screenshot-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "screenshot-main.png"; path = "../../../../Desktop/screenshot-main.png"; sourceTree = "<group>"; };
 		D2AD864B291584B800908CC1 /* RT Salt Bettor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RT Salt Bettor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AD864E291584B800908CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AD8650291584B800908CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D293B26129665EBC0047EE66 /* screenshot-credits.png */,
-				D293B26029665E850047EE66 /* screenshot-main.png */,
+				D293B262296664B20047EE66 /* screenshot-main.png */,
 				D293B25F29665DF90047EE66 /* screenplay.gif */,
 				D2AD8670291587BA00908CC1 /* credits.html */,
 				D293B25C296652610047EE66 /* RTClassifier.mlpackage */,

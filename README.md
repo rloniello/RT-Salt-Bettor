@@ -7,9 +7,9 @@ It is provided for entertainment & educational purposes only and should not be u
 Sick of loosing all your Salt (Artosis' Twitch Channel Points) to B-Rank Protoss Smurf's? 
 Make better bets with the RT Salt Bettor App.
 
-<img src="/Resources/screenplay.gif" height="30%"/>
-<img src="/Resources/screenshot-main.png" height="30%"/>
-<img src="/Resources/screenshot-credits.png" height="30%"/>
+<img src="https://github.com/rloniello/RT-Salt-Bettor/blob/main/RT%20Salt%20Bettor/Resources/screenplay.gif" height="30%"/>
+<img src="https://github.com/rloniello/RT-Salt-Bettor/blob/main/RT%20Salt%20Bettor/Resources/screenshot-main.png" height="30%"/>
+<img src="https://github.com/rloniello/RT-Salt-Bettor/blob/main/RT%20Salt%20Bettor/Resources/screenshot-credits.png" height="30%"/>
 
 ## Features
 RT Salt Better showcases the follwing Features:

@@ -47,7 +47,7 @@ final class MatchPredictor: NSObject {
                 outputText = "The match is fairly even."
                 return outputText
             case 0.25...44:
-                outputText = "Opponent is sligtly favored."
+                outputText = "Opponent is slightly favored."
                 return outputText
             case 0.0...24:
                 outputText = "Opponent is strongly favored."

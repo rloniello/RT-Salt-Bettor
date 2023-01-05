@@ -61,3 +61,27 @@ The following evaluation was generated after training:
 
 ## Additonal Disclaimer
 "RT Salt Bettor" is a predictive app for Starcraft Broodwar matches between Artosis and another player. It is provided for entertainment & educational purposes only and should not be used for any other purpose. The predictions made by the app are not guaranteed to be accurate and should not be relied upon for any financial or other important decisions. The app does not endorse or encourage gambling or any other illegal activity. Use of the app is at the user's own risk and the creators of the app shall not be held responsible for any losses or damages that may result from using the app.
+
+## Installation 
+
+The following install steps may be helpful to a beginner:
+
+Requirements:
+    1. A Mac computer running the latest macOS. (macOS Ventura 13.1).
+    2. Latest version of Xcode (download from the App store).
+    
+Download and Run
+    1. Download or Clone the repository **Clone** > **Download Zip**
+    2. Open the **.xcodeproj** file with Xcode.
+    3. Select a simulator or connected device from the dropdown menu in the top left corner of the window.
+    4. Click the play button (▶️) to build and run the project.
+    5. Do not close the iOS Simulator, instead press the stop button in Xcode (⏹️) to kill the app. This prevents the simulator from having to reset and restart on every run.
+    
+Xcode may prompt you to sign in with your Apple ID to create an Apple Developer Account in most cases this is not necessary.
+You do not need to pay for a Apple Developer Account to use this app. 
+If you do create an developer account, you may need to re-sign the app by changing the **team** in *RT Salt Bettor > Signing & Capabilities* to your own developer account. 
+
+
+## Feedback, Bugs and Feature Requests.
+
+Good or Bad, I am always interested in hearing your feedback. Please submit your feedback, bug reports and Feature Requests by creating a new *Issue post* in **Issues** on this repository.

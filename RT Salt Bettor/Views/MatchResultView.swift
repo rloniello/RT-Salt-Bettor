@@ -11,6 +11,7 @@ class MatchResultView: UIView {
     
     private lazy var primaryResultLabel: UILabel = {
         let l = UILabel()
+        l.accessibilityIdentifier = "MatchResultPrimaryLabel"
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor(named: "bwlabel")
         l.textAlignment = .center
@@ -20,6 +21,7 @@ class MatchResultView: UIView {
     
     private lazy var resultsDetailsLabel: UILabel = {
         let l = UILabel()
+        l.accessibilityIdentifier = "MatchResultDetailsLabel"
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor(named: "bwlabel")
         l.textAlignment = .center
@@ -52,7 +54,7 @@ class MatchResultView: UIView {
     }
     
     private func setupSubviews() {
-        
+        self.accessibilityIdentifier = "MatchResultView"
         self.addSubview(primaryResultLabel)
         self.addSubview(resultsDetailsLabel)
         self.addSubview(okButton)

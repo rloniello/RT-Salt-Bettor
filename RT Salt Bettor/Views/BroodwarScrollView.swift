@@ -15,6 +15,7 @@ final class BroodwarScrollView: UIView, UIScrollViewDelegate {
     lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.delegate = self
+        sv.accessibilityIdentifier = "ChildScrollView"
         sv.isDirectionalLockEnabled = true
         sv.showsVerticalScrollIndicator = false
         sv.showsHorizontalScrollIndicator = false
@@ -46,6 +47,7 @@ final class BroodwarScrollView: UIView, UIScrollViewDelegate {
     
     // MARK: Class Methods
     private func setupSubviews() {
+        self.accessibilityIdentifier = "BroodwarScrollView"
         self.addSubview(bwbackgroundImageView)
         self.addSubview(scrollView)
         

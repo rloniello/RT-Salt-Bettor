@@ -19,6 +19,7 @@ class RaceSelectionView: UIView {
     
     lazy var terranImageView: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "terran.png"), highlightedImage: UIImage(named: "terran_highlighted.png"))
+        iv.accessibilityIdentifier = "TerranImageView"
         iv.isUserInteractionEnabled = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -26,6 +27,7 @@ class RaceSelectionView: UIView {
     
     lazy var zergImageView: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "zerg.png"), highlightedImage: UIImage(named: "zerg_highlighted.png"))
+        iv.accessibilityIdentifier = "ZergImageView"
         iv.isUserInteractionEnabled = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -33,6 +35,7 @@ class RaceSelectionView: UIView {
     
     lazy var protossImageView: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "protoss.png"), highlightedImage: UIImage(named: "protoss_highlighted.png"))
+        iv.accessibilityIdentifier = "ProtossImageView"
         iv.isUserInteractionEnabled = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
@@ -61,6 +64,7 @@ class RaceSelectionView: UIView {
     }
     
     private func commonInit() {
+        self.accessibilityIdentifier = "RaceSelectionView"
         tapTerran = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
         tapZerg = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))
         tapProtoss = UITapGestureRecognizer(target: self, action: #selector(didTapImageView))

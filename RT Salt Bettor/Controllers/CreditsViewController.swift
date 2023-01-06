@@ -34,6 +34,7 @@ final class CreditsViewController: UIViewController {
     // MARK: Class Methods
     private func setupWebkitView() {
         self.webkitView = WKWebView()
+        self.webkitView.accessibilityIdentifier = "WebKitCreditsView"
         self.webkitView.tintColor = UIColor(named: "bwtext")
         self.webkitView.isOpaque = false
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D266D7052967B0A300D475B6 /* RT_Salt_BettorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266D7042967B0A300D475B6 /* RT_Salt_BettorTests.swift */; };
+		D266D7122967B0B400D475B6 /* RT_Salt_BettorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266D7112967B0B400D475B6 /* RT_Salt_BettorUITests.swift */; };
+		D266D7142967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266D7132967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift */; };
 		D293B25D296652610047EE66 /* RTClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = D293B25C296652610047EE66 /* RTClassifier.mlpackage */; };
 		D2AD864F291584B800908CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD864E291584B800908CC1 /* AppDelegate.swift */; };
 		D2AD8651291584B800908CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD8650291584B800908CC1 /* SceneDelegate.swift */; };
@@ -32,7 +35,29 @@
 		D2B0DAEF2915AF2600D007ED /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0DAEE2915AF2600D007ED /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D266D7062967B0A300D475B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2AD8643291584B800908CC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AD864A291584B800908CC1;
+			remoteInfo = "RT Salt Bettor";
+		};
+		D266D7152967B0B400D475B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2AD8643291584B800908CC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AD864A291584B800908CC1;
+			remoteInfo = "RT Salt Bettor";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D266D7022967B0A300D475B6 /* RT Salt BettorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RT Salt BettorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D266D7042967B0A300D475B6 /* RT_Salt_BettorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorTests.swift; sourceTree = "<group>"; };
+		D266D70F2967B0B400D475B6 /* RT Salt BettorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RT Salt BettorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D266D7112967B0B400D475B6 /* RT_Salt_BettorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorUITests.swift; sourceTree = "<group>"; };
+		D266D7132967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D293B25829664E7E0047EE66 /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
 		D293B25929664E9B0047EE66 /* Artosis Match Data-010423.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Artosis Match Data-010423.csv"; sourceTree = "<group>"; };
 		D293B25C296652610047EE66 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
@@ -68,6 +93,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D266D6FF2967B0A300D475B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D266D70C2967B0B400D475B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AD8648291584B800908CC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,12 +117,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D266D7032967B0A300D475B6 /* RT Salt BettorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D266D7042967B0A300D475B6 /* RT_Salt_BettorTests.swift */,
+			);
+			path = "RT Salt BettorTests";
+			sourceTree = "<group>";
+		};
+		D266D7102967B0B400D475B6 /* RT Salt BettorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D266D7112967B0B400D475B6 /* RT_Salt_BettorUITests.swift */,
+				D266D7132967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift */,
+			);
+			path = "RT Salt BettorUITests";
+			sourceTree = "<group>";
+		};
 		D2AD8642291584B800908CC1 = {
 			isa = PBXGroup;
 			children = (
 				D293B25E296655070047EE66 /* License.md */,
 				D2AD867F291591A400908CC1 /* README.md */,
 				D2AD864D291584B800908CC1 /* RT Salt Bettor */,
+				D266D7032967B0A300D475B6 /* RT Salt BettorTests */,
+				D266D7102967B0B400D475B6 /* RT Salt BettorUITests */,
 				D2AD864C291584B800908CC1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				D2AD864B291584B800908CC1 /* RT Salt Bettor.app */,
+				D266D7022967B0A300D475B6 /* RT Salt BettorTests.xctest */,
+				D266D70F2967B0B400D475B6 /* RT Salt BettorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +235,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D266D7012967B0A300D475B6 /* RT Salt BettorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D266D70A2967B0A300D475B6 /* Build configuration list for PBXNativeTarget "RT Salt BettorTests" */;
+			buildPhases = (
+				D266D6FE2967B0A300D475B6 /* Sources */,
+				D266D6FF2967B0A300D475B6 /* Frameworks */,
+				D266D7002967B0A300D475B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D266D7072967B0A300D475B6 /* PBXTargetDependency */,
+			);
+			name = "RT Salt BettorTests";
+			productName = "RT Salt BettorTests";
+			productReference = D266D7022967B0A300D475B6 /* RT Salt BettorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D266D70E2967B0B400D475B6 /* RT Salt BettorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D266D7172967B0B400D475B6 /* Build configuration list for PBXNativeTarget "RT Salt BettorUITests" */;
+			buildPhases = (
+				D266D70B2967B0B400D475B6 /* Sources */,
+				D266D70C2967B0B400D475B6 /* Frameworks */,
+				D266D70D2967B0B400D475B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D266D7162967B0B400D475B6 /* PBXTargetDependency */,
+			);
+			name = "RT Salt BettorUITests";
+			productName = "RT Salt BettorUITests";
+			productReference = D266D70F2967B0B400D475B6 /* RT Salt BettorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D2AD864A291584B800908CC1 /* RT Salt Bettor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2AD865F291584B900908CC1 /* Build configuration list for PBXNativeTarget "RT Salt Bettor" */;
@@ -199,9 +295,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					D266D7012967B0A300D475B6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D2AD864A291584B800908CC1;
+					};
+					D266D70E2967B0B400D475B6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D2AD864A291584B800908CC1;
+					};
 					D2AD864A291584B800908CC1 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -221,11 +325,27 @@
 			projectRoot = "";
 			targets = (
 				D2AD864A291584B800908CC1 /* RT Salt Bettor */,
+				D266D7012967B0A300D475B6 /* RT Salt BettorTests */,
+				D266D70E2967B0B400D475B6 /* RT Salt BettorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D266D7002967B0A300D475B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D266D70D2967B0B400D475B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AD8649291584B800908CC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +361,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D266D6FE2967B0A300D475B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D266D7052967B0A300D475B6 /* RT_Salt_BettorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D266D70B2967B0B400D475B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D266D7142967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift in Sources */,
+				D266D7122967B0B400D475B6 /* RT_Salt_BettorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AD8647291584B800908CC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +405,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D266D7072967B0A300D475B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AD864A291584B800908CC1 /* RT Salt Bettor */;
+			targetProxy = D266D7062967B0A300D475B6 /* PBXContainerItemProxy */;
+		};
+		D266D7162967B0B400D475B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AD864A291584B800908CC1 /* RT Salt Bettor */;
+			targetProxy = D266D7152967B0B400D475B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D2AD8659291584B900908CC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -280,6 +430,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D266D7082967B0A300D475B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PF5SG3LUHB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-BettorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RT Salt Bettor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RT Salt Bettor";
+			};
+			name = Debug;
+		};
+		D266D7092967B0A300D475B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PF5SG3LUHB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-BettorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RT Salt Bettor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RT Salt Bettor";
+			};
+			name = Release;
+		};
+		D266D7182967B0B400D475B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PF5SG3LUHB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-BettorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RT Salt Bettor";
+			};
+			name = Debug;
+		};
+		D266D7192967B0B400D475B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PF5SG3LUHB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.loniello.RT-Salt-BettorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RT Salt Bettor";
+			};
+			name = Release;
+		};
 		D2AD865D291584B900908CC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +689,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D266D70A2967B0A300D475B6 /* Build configuration list for PBXNativeTarget "RT Salt BettorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D266D7082967B0A300D475B6 /* Debug */,
+				D266D7092967B0A300D475B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D266D7172967B0B400D475B6 /* Build configuration list for PBXNativeTarget "RT Salt BettorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D266D7182967B0B400D475B6 /* Debug */,
+				D266D7192967B0B400D475B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2AD8646291584B800908CC1 /* Build configuration list for PBXProject "RT Salt Bettor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

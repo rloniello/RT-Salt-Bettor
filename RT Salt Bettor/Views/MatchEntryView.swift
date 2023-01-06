@@ -9,6 +9,9 @@ import UIKit
 
 final class MatchEntryView: UIView {
     
+    // MARK: Properties
+    private var typingTimer: Timer?
+    
     // MARK: Subviews
     // (In order of appearance.)
     private lazy var artosisImageView: UIImageView = {
@@ -23,6 +26,7 @@ final class MatchEntryView: UIView {
     
     lazy var currentMMR: UITextField = {
         let tf = UITextField()
+        tf.accessibilityIdentifier = "CurrentMMRTextField"
         tf.textColor = UIColor(named: "bwtext")
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "Artosis' MMR"
@@ -37,6 +41,7 @@ final class MatchEntryView: UIView {
     
     lazy var opponentMMR: UITextField = {
         let tf = UITextField()
+        tf.accessibilityIdentifier = "OpponentMMRTextField"
         tf.textColor = UIColor(named: "bwtext")
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = "Opponent's MMR"
@@ -68,7 +73,7 @@ final class MatchEntryView: UIView {
     }
     
     func setupSubviews() {
-        
+        self.accessibilityIdentifier = "MatchEntryView"
         let spacing: CGFloat = 12.0
         
         self.addSubview(artosisImageView)
@@ -164,6 +169,13 @@ final class MatchEntryView: UIView {
         return (mmr: mmr, ommr: ommr)
     }
     
+    private func setTextColor(for textField: UITextField) {
+        if let text = textField.text, let intText = Int(text) {
+            let color = textColor(for: intText)
+            textField.textColor = color
+        }
+    }
+    
 }
 
 extension MatchEntryView: UITextFieldDelegate {
@@ -172,20 +184,23 @@ extension MatchEntryView: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let text = textField.text, let intText = Int(text) {
-            let color = textColor(for: intText)
-            textField.textColor = color
-        }
+        self.setTextColor(for: textField)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         
+        self.typingTimer?.invalidate()
+        
+        self.typingTimer = Timer.scheduledTimer(withTimeInterval: 0.6, repeats: false, block: { [weak self] timer in
+            self?.setTextColor(for: textField)
+        })
+        
         if (string == "") {
             return true
         }
         // Stop more than 4 character input
-        if (currentText.count >= 4) {
+        if (currentText.count + string.count > 4) {
             return false
         }
         

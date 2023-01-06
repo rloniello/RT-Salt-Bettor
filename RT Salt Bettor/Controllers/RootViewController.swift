@@ -17,7 +17,7 @@ final class RootViewController: UIViewController {
     private var predictor = MatchPredictor()
     private var bwScrollView = BroodwarScrollView()
     private lazy var informationButton = BWViewFactory.informationButton()
-    private lazy var makePerdictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
+    private lazy var makePredictionButton = BWViewFactory.button(withTitle: "Let's GAMBA")
     
     
     // MARK: Initialization
@@ -32,6 +32,8 @@ final class RootViewController: UIViewController {
     }
     
     private func commonInit() {
+        self.informationButton.accessibilityIdentifier = "CreditsInformationButton"
+        self.makePredictionButton.accessibilityIdentifier = "MakePredictionButton"
         self.matchEntryView = MatchEntryView()
         self.raceSelector = RaceSelectionView()
         self.setupSubviews() // always last.
@@ -60,13 +62,12 @@ final class RootViewController: UIViewController {
         
         bwScrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endEditing)))
         informationButton.addTarget(self, action: #selector(showCredits), for: .touchUpInside)
-        makePerdictionButton.addTarget(self, action: #selector(showResults), for: .touchUpInside)
+        makePredictionButton.addTarget(self, action: #selector(showResults), for: .touchUpInside)
         
-        bwScrollView.addScrollableView(makePerdictionButton)
+        bwScrollView.addScrollableView(makePredictionButton)
         bwScrollView.addScrollableView(matchEntryView)
         bwScrollView.addScrollableView(raceSelector)
         bwScrollView.addSubview(informationButton)
-        
         let constraints: [NSLayoutConstraint] = [
             
             matchEntryView.topAnchor.constraint(equalTo: bwScrollView.scrollView.topAnchor),
@@ -77,10 +78,10 @@ final class RootViewController: UIViewController {
             raceSelector.leadingAnchor.constraint(equalTo: bwScrollView.leadingAnchor, constant: 20.0),
             raceSelector.trailingAnchor.constraint(equalTo: bwScrollView.trailingAnchor, constant: -20.0),
             
-            makePerdictionButton.topAnchor.constraint(equalTo: raceSelector.bottomAnchor, constant: 30.0),
-            makePerdictionButton.widthAnchor.constraint(equalTo: bwScrollView.widthAnchor, multiplier: 0.75),
-            makePerdictionButton.centerXAnchor.constraint(equalTo: bwScrollView.centerXAnchor),
-            makePerdictionButton.heightAnchor.constraint(equalToConstant: 55.0),
+            makePredictionButton.topAnchor.constraint(equalTo: raceSelector.bottomAnchor, constant: 30.0),
+            makePredictionButton.widthAnchor.constraint(equalTo: bwScrollView.widthAnchor, multiplier: 0.75),
+            makePredictionButton.centerXAnchor.constraint(equalTo: bwScrollView.centerXAnchor),
+            makePredictionButton.heightAnchor.constraint(equalToConstant: 55.0),
             
             informationButton.topAnchor.constraint(equalTo: bwScrollView.topAnchor, constant: 70),
             informationButton.widthAnchor.constraint(equalToConstant: 44),

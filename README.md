@@ -71,7 +71,7 @@ Requirements:
 2. Latest version of Xcode (download from the App store).
     
 Download and Run
-1. Download or Clone the repository **Clone** > **Download Zip**
+1. Download or Clone the repository **Code** > **Download Zip**
 2. Open the **.xcodeproj** file with Xcode.
 3. Select a simulator or connected device from the dropdown menu in the top left corner of the window.
 4. Click the play button (▶️) to build and run the project.

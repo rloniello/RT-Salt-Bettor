@@ -67,15 +67,15 @@ The following evaluation was generated after training:
 The following install steps may be helpful to a beginner:
 
 Requirements:
-    1. A Mac computer running the latest macOS. (macOS Ventura 13.1).
-    2. Latest version of Xcode (download from the App store).
+1. A Mac computer running the latest macOS. (macOS Ventura 13.1).
+2. Latest version of Xcode (download from the App store).
     
 Download and Run
-    1. Download or Clone the repository **Clone** > **Download Zip**
-    2. Open the **.xcodeproj** file with Xcode.
-    3. Select a simulator or connected device from the dropdown menu in the top left corner of the window.
-    4. Click the play button (▶️) to build and run the project.
-    5. Do not close the iOS Simulator, instead press the stop button in Xcode (⏹️) to kill the app. This prevents the simulator from having to reset and restart on every run.
+1. Download or Clone the repository **Clone** > **Download Zip**
+2. Open the **.xcodeproj** file with Xcode.
+3. Select a simulator or connected device from the dropdown menu in the top left corner of the window.
+4. Click the play button (▶️) to build and run the project.
+5. Do not close the iOS Simulator, instead press the stop button in Xcode (⏹️) to kill the app. This prevents the simulator from having to reset and restart on every run.
     
 Xcode may prompt you to sign in with your Apple ID to create an Apple Developer Account in most cases this is not necessary.
 You do not need to pay for a Apple Developer Account to use this app. 

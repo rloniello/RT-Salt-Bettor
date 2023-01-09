@@ -33,7 +33,7 @@ enum DataEntryErrorReason: CustomStringConvertible {
                     "Yeah, Flash would win.",
                     "EZ, YEPP",
                     "Why even ask?",
-                    "There Trash, RT's brain is melting",
+                    "They're Trash!, My brain is melting.",
                 ].randomElement()!
             case .ommrTooHigh:
                 return [

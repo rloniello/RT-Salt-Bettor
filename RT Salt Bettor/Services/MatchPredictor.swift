@@ -67,9 +67,9 @@ final class MatchPredictor: NSObject {
         }
         
         let winorloss:Int64 = (winning > loosing) ? 1 : 0
-        let winlossString = (winorloss == 1) ? "Win" : "Loss"
+        let winlossString = (winorloss == 1) ? "RT Will Win" : "RT Will Lose"
         let confidence: Double = round(result[winorloss]! * 1000) / 10.0
-        outputText = winlossString + " Confidence: \(confidence)%"
+        outputText = winlossString + ",\nConfidence: \(confidence)%"
         if (confidence > 68.9 && confidence < 70) {
             outputText += " Nice!"
         }

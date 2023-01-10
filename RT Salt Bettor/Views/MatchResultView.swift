@@ -25,6 +25,8 @@ class MatchResultView: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = UIColor(named: "bwlabel")
         l.textAlignment = .center
+        l.numberOfLines = 2
+        l.adjustsFontSizeToFitWidth = true
         l.text = "???"
         return l
     }()
@@ -70,7 +72,7 @@ class MatchResultView: UIView {
             resultsDetailsLabel.topAnchor.constraint(equalTo: primaryResultLabel.bottomAnchor, constant: 24.0),
             resultsDetailsLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             resultsDetailsLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0),
-            resultsDetailsLabel.heightAnchor.constraint(equalToConstant: 60),
+            resultsDetailsLabel.heightAnchor.constraint(equalToConstant: 85),
             
             okButton.topAnchor.constraint(equalTo: resultsDetailsLabel.bottomAnchor, constant: 24.0),
             okButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),

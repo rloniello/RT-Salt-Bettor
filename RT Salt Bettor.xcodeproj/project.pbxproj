@@ -55,12 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2200FFE298CBF430059320C /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
 		D266D7022967B0A300D475B6 /* RT Salt BettorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RT Salt BettorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D266D7042967B0A300D475B6 /* RT_Salt_BettorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorTests.swift; sourceTree = "<group>"; };
 		D266D70F2967B0B400D475B6 /* RT Salt BettorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RT Salt BettorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D266D7112967B0B400D475B6 /* RT_Salt_BettorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorUITests.swift; sourceTree = "<group>"; };
 		D266D7132967B0B400D475B6 /* RT_Salt_BettorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RT_Salt_BettorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D293B25829664E7E0047EE66 /* Artosis Match Data Cleaned.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Artosis Match Data Cleaned.numbers"; sourceTree = "<group>"; };
 		D293B25929664E9B0047EE66 /* Artosis Match Data-010423.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Artosis Match Data-010423.csv"; sourceTree = "<group>"; };
 		D293B25C296652610047EE66 /* RTClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = RTClassifier.mlpackage; sourceTree = "<group>"; };
 		D293B25E296655070047EE66 /* License.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
@@ -190,13 +190,13 @@
 		D2AD8663291584C300908CC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2200FFE298CBF430059320C /* Artosis Match Data Cleaned.numbers */,
 				D2C4C436296D22FB00C3BF3D /* screenplay.gif */,
 				D2C4C435296D22FB00C3BF3D /* screenshot-main.png */,
 				D293B26129665EBC0047EE66 /* screenshot-credits.png */,
 				D2AD8670291587BA00908CC1 /* credits.html */,
 				D293B25C296652610047EE66 /* RTClassifier.mlpackage */,
 				D2AD8671291587BA00908CC1 /* SCR_Rank_table.jpeg */,
-				D293B25829664E7E0047EE66 /* Artosis Match Data Cleaned.numbers */,
 				D293B25929664E9B0047EE66 /* Artosis Match Data-010423.csv */,
 			);
 			path = Resources;

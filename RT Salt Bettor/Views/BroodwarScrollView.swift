@@ -12,6 +12,7 @@ final class BroodwarScrollView: UIView, UIScrollViewDelegate {
     // MARK: Subviews
     private lazy var bwbackgroundImageView = BWViewFactory.background()
     
+    
     lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.delegate = self
@@ -32,6 +33,7 @@ final class BroodwarScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         if (frame == .zero) {
@@ -39,6 +41,7 @@ final class BroodwarScrollView: UIView, UIScrollViewDelegate {
         }
         setupSubviews()
     }
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
